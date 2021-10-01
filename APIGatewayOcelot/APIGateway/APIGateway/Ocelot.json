@@ -1,0 +1,225 @@
+{
+  "ReRoutes": [
+    {
+      // portal to Mod1 
+      "DownstreamPathTemplate": "/api/processpension/mod1?&dob={dob}&aadharNumber={number}&Name={name}&PAN={pan}&pensionType={pt}",
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "49650"
+        }
+      ],
+      "UpstreamPathTemplate": "/processpension/mod1?&dob={dob}&aadharNumber={number}&Name={name}&PAN={pan}&pensionType={pt}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      //Mod1 to mod2
+      "DownstreamPathTemplate": "/api/pensionerdetails/{num}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "20268"
+        }
+      ],
+      "UpstreamPathTemplate": "/pensionerdetails/{num}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      //mod1 to 3
+      "DownstreamPathTemplate": "/api/pensiondisbursements/{id}/{salaryCalculated}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "12856"
+        }
+      ],
+      "UpstreamPathTemplate": "/pensiondisbursements/{id}/{salaryCalculated}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+
+      //mod3 to mod 2
+      "DownstreamPathTemplate": "/api/pensionerdetails/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "20268"
+        }
+      ],
+      "UpstreamPathTemplate": "/pdetails/{id}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    //{
+    //  //Authentication
+
+    //  "DownstreamPathTemplate": "/api/GenerateJwt",
+    //  "DownstreamScheme": "http",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": ""
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/Vendor/{product_Id}",
+    //  "UpstreamHttpMethod": [ "GET" ]
+    //},
+
+
+
+
+    //{
+    //  //Add Product to Wishlist using ProductId and CustomerId
+
+    //  "DownstreamPathTemplate": "/api/CartMicroservice/GetVendor/{productid}",
+    //  "DownstreamScheme": "https",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": "44391"
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/GetVendor/{productid}",
+    //  "UpstreamHttpMethod": [ "GET" ]
+    //},
+
+    //{
+    //  //Add Product To Cart and Send cart as 
+
+    //  "DownstreamPathTemplate": "/api/CartMicroservice/AddProductToCart",
+    //  "DownstreamScheme": "https",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": "44391"
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/GetCart",
+    //  "UpstreamHttpMethod": [ "POST" ]
+    //},
+    //{
+    //  //Get Cart Details by User Id
+
+    //  "DownstreamPathTemplate": "/api/CartMicroservice/GetCartById/{id}",
+    //  "DownstreamScheme": "https",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": "44391"
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/GetCartById/{id}",
+    //  "UpstreamHttpMethod": [ "GET" ]
+    //},
+    //{
+    //  //Get Wishlist Details by User Id
+
+    //  "DownstreamPathTemplate": "/api/CartMicroservice/GetWishList/{id}",
+    //  "DownstreamScheme": "https",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": "44391"
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/GetWishList/{id}",
+    //  "UpstreamHttpMethod": [ "GET" ]
+    //},
+    //{
+    //  //Add Product to Wishlist using ProductId and CustomerId
+
+    //  "DownstreamPathTemplate": "/api/CartMicroservice/PostWishlist/{customerid}/{productid}",
+    //  "DownstreamScheme": "https",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": "44391"
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/PostWishlist/{customerid}/{productid}",
+    //  "UpstreamHttpMethod": [ "POST" ]
+    //},
+    //{
+    //  //Delete Product from Wishlist using ProductId and CustomerId
+
+    //  "DownstreamPathTemplate": "/api/CartMicroservice/RemoveProductFromWishlist/{uid}/{pid}",
+    //  "DownstreamScheme": "https",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": "44391"
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/RemoveProductFromWishlist/{uid}/{pid}",
+    //  "UpstreamHttpMethod": [ "DELETE" ]
+    //},
+    //{
+    //  //Delete Product from Cart using ProductId and CustomerId
+
+    //  "DownstreamPathTemplate": "/api/CartMicroservice/RemoveProductFromCart/{uid}/{pid}",
+    //  "DownstreamScheme": "https",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": "44391"
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/RemoveProductFromCart/{uid}/{pid}",
+    //  "UpstreamHttpMethod": [ "DELETE" ]
+    //},
+
+
+
+
+    //{
+    //  //User Login with Email and Password
+
+    //  "DownstreamPathTemplate": "/api/User/Login",
+    //  "DownstreamScheme": "https",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": "44354"
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/User/Login",
+    //  "UpstreamHttpMethod": [ "POST" ]
+    //},
+    //{
+    //  //User Signup Using Register Class
+
+    //  "DownstreamPathTemplate": "/api/User/SignUp",
+    //  "DownstreamScheme": "https",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": "44354"
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/User/SignUp",
+    //  "UpstreamHttpMethod": [ "POST" ]
+    //},
+    //{
+    //  //User Logout
+    //  "DownstreamPathTemplate": "/api/User/Logout",
+    //  "DownstreamScheme": "https",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": "44354"
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/User/Logout",
+    //  "UpstreamHttpMethod": [ "GET" ]
+    //}
+
+
+
+
+
+  ]
+}

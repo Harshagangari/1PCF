@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessPensionMd1", "ProcessPensionMd1\ProcessPensionMd1.csproj", "{BE319A4C-E1C6-4E6F-A94A-708A1FEC37E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE319A4C-E1C6-4E6F-A94A-708A1FEC37E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE319A4C-E1C6-4E6F-A94A-708A1FEC37E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE319A4C-E1C6-4E6F-A94A-708A1FEC37E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE319A4C-E1C6-4E6F-A94A-708A1FEC37E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {932F7455-8A2B-46E0-BE1F-1A22619BD8CD}
+	EndGlobalSection
+EndGlobal
